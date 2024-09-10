@@ -46,6 +46,7 @@ const Task = ({item: {content, id, isCompleted}}: taskProps) => {
   const toggleCheckFn = () => {
     dispatch(toggleCheck(id));
   };
+
   return (
     <View style={[styles.task, {opacity: isCompleted ? 0.5 : 1}]}>
       <Text>{content}</Text>

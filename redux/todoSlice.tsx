@@ -19,11 +19,6 @@ const todoSlice = createSlice({
     addTodo(state, action: PayloadAction<TODO>) {
       state.todos = [...state.todos, action.payload];
       updateFilteredTodos(state);
-      // if (state.activedFilter === 'all') {
-      //   state.filteredTodos = state.todos;
-      // } else if (state.activedFilter === 'pending') {
-      //   state.filteredTodos = state.todos.filter((d: TODO) => !d.isCompleted);
-      // }
     },
     deleteTodo(state, action: PayloadAction<number>) {
       state.todos = state.todos.filter((d: TODO) => d?.id != action.payload);
